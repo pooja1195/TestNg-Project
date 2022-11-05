@@ -26,8 +26,7 @@ public class CommonVerifyLogin extends ModifiedBaseclass{
 		LPO.clickonLogin().click();
 		
 		CommonUtilities.handleAssertions(LPO.Loginerror().getText(), TestData.expectederror);
-//Explicit Wait		
-		CommonUtilities.handleExplicitwait(30, LPO.tryforFree);
+		Thread.sleep(4000);
 	    
 		LPO.TryforFree().click();
 		
