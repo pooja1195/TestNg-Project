@@ -1,6 +1,11 @@
 package TestCases;
 
 import java.io.IOException;
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -21,8 +26,9 @@ public class CommonVerifyLogin extends ModifiedBaseclass{
 		LPO.clickonLogin().click();
 		
 		CommonUtilities.handleAssertions(LPO.Loginerror().getText(), TestData.expectederror);
-		
-		Thread.sleep(2000);
+//Explicit Wait		
+		CommonUtilities.handleExplicitwait(30, LPO.tryforFree);
+	    
 		LPO.TryforFree().click();
 		
 	}

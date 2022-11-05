@@ -7,13 +7,13 @@ import org.openqa.selenium.WebElement;
 public class SignupPageObject {
 	
 	WebDriver Driver;
-	By firstname= By.xpath("//input[@name='UserFirstName']");
-	By lastname = By.xpath("//input[@name='UserLastName']");
-	By email = By.xpath("//input[@name='UserEmail']");
-	By employees = By.xpath("//select[@name='CompanyEmployees']");
-	By country = By.xpath("//select[@name='CompanyCountry']");
-	By TnC = By.xpath("(//div[@class='checkbox-ui'])[1]");
-	By trial = By.xpath("//button[@name='start my free trial']");
+	public By firstname= By.xpath("//input[@name='UserFirstName']");
+	private By lastname = By.xpath("//input[@name='UserLastName']");
+	private By email = By.xpath("//input[@name='UserEmail']");
+	private By employees = By.xpath("//select[@name='CompanyEmployees']");
+	private By country = By.xpath("//select[@name='CompanyCountry']");
+	private By TnC = By.xpath("(//div[@class='checkbox-ui'])[1]");
+	private By trial = By.xpath("//button[@name='start my free trial']");
 	
 	public SignupPageObject(WebDriver driver2) {
 		// TODO Auto-generated constructor stub

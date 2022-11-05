@@ -18,8 +18,9 @@ public class CommonVerifySignup extends ModifiedBaseclass{
 		LoginPageObject LPO = new LoginPageObject(Driver);
 		LPO.TryforFree().click();
 		
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		SignupPageObject SPO = new SignupPageObject(Driver);
+		
 		SPO.Firstname().sendKeys(TestData.firstname);
 		SPO.Lastname().sendKeys(TestData.lastname);
 		SPO.Email().sendKeys(TestData.email);
@@ -29,8 +30,8 @@ public class CommonVerifySignup extends ModifiedBaseclass{
 		
 		SPO.Country().click();
 		CommonUtilities.handleStaticDropdown(SPO.Country(), 1);
-//		SPO.Country().clear();
-//		s1.selectByValue("India"); //is not working
+		SPO.Country().clear();
+		CommonUtilities.handleStaticDDByValue(SPO.Country(), "AR");
 		
 		SPO.Terms().click();
 		SPO.FreeTrial().click();

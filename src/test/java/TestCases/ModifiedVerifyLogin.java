@@ -1,6 +1,11 @@
 package TestCases;
 
 import java.io.IOException;
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -25,10 +30,13 @@ public class ModifiedVerifyLogin extends ModifiedBaseclass{
 		SoftAssert Assertion = new SoftAssert();
 		Assertion.assertEquals(actual, expected);
 		
-		Thread.sleep(2000);
+		
+//Explicit Wait		
+		WebDriverWait wb=new WebDriverWait(Driver,Duration.ofSeconds(50));
+		wb.until(ExpectedConditions.visibilityOfElementLocated(LPO.tryforFree));
+		
 		LPO.TryforFree().click();
-		
 		Assertion.assertAll();
-		
+		Driver.close();
 	}
 }

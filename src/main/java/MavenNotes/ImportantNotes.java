@@ -6,6 +6,8 @@ public class ImportantNotes {
 > File > New > project > MavenProject > Select an archetype :: Filter - org.apache.maven > select quickstart template > Click on Next > 
 Select Group ID (package name) > artifact ID (project name) > Click on Finish.
 
+** To move to project folder path in system :: Right click on project > Showin > SystemExplorer
+
 ** Quickstart template of maven. 
 ** Maven provides template for readymade projects
 ** Use of pom.xml file - We don't add jars in Maven project, instead we are adding "dependency" in pom.xml file by searching "testng/selenium maven dependency" 

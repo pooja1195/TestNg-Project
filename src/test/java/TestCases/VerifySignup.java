@@ -31,8 +31,8 @@ public class VerifySignup extends Baseclass{
 		SPO.Country().click();
 		Select s1 = new Select(SPO.Country());
 		s1.selectByIndex(1);
-//		SPO.Country().clear();
-//		s1.selectByValue("India"); //is not working
+		SPO.Country().clear();
+		s1.selectByValue("India"); //is not working
 		
 		SPO.Terms().click();
 		SPO.FreeTrial().click();
