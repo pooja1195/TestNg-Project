@@ -31,10 +31,11 @@ public class ModifiedVerifyLogin extends ModifiedBaseclass{
 		Assertion.assertEquals(actual, expected);
 		
 		
-//Explicit Wait		
+/*Explicit Wait		
 		WebDriverWait wb=new WebDriverWait(Driver,Duration.ofSeconds(50));
-		wb.until(ExpectedConditions.visibilityOfElementLocated(LPO.tryforFree));
+		wb.until(ExpectedConditions.visibilityOfElementLocated(LPO.tryforFree));*/
 		
+		Thread.sleep(3000);
 		LPO.TryforFree().click();
 		Assertion.assertAll();
 		Driver.close();

@@ -19,7 +19,8 @@ public class CommonVerifySignup extends ModifiedBaseclass{
 		LPO.TryforFree().click();
 				
 		SignupPageObject SPO = new SignupPageObject(Driver);
-		CommonUtilities.handleExplicitwait(30, SPO.firstname);//Explicit Wait
+//		CommonUtilities.handleExplicitwait(30, SPO.firstname);//Explicit Wait
+		Thread.sleep(30);
 		
 		SPO.Firstname().sendKeys(TestData.firstname);
 		SPO.Lastname().sendKeys(TestData.lastname);
