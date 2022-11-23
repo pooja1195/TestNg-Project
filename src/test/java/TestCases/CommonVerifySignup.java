@@ -27,12 +27,13 @@ public class CommonVerifySignup extends ModifiedBaseclass{
 		SPO.Email().sendKeys(TestData.email);
 		
 		SPO.Employee().click();
-		CommonUtilities.handleStaticDropdown(SPO.Employee(), 1);
+		CommonUtilities com = new CommonUtilities(Driver);
+		com.handleStaticDropdown(SPO.Employee(), 1);
 		
 		SPO.Country().click();
-		CommonUtilities.handleStaticDropdown(SPO.Country(), 1);
+		com.handleStaticDropdown(SPO.Country(), 1);
 		SPO.Country().clear();
-		CommonUtilities.handleStaticDDByValue(SPO.Country(), "AR");
+		com.handleStaticDDByValue(SPO.Country(), "AR");
 		
 		SPO.Terms().click();
 		SPO.FreeTrial().click();

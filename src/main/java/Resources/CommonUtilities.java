@@ -12,6 +12,11 @@ import org.testng.asserts.SoftAssert;
 
 public class CommonUtilities {
 	public static WebDriver Driver;
+	public CommonUtilities(WebDriver driver2) {
+		// TODO Auto-generated constructor stub
+		Driver = driver2;
+	}
+
 	public static void handleAssertions(String actualerror, String expectederror1) {
 	String actual = actualerror;
 	String expected = expectederror1;
